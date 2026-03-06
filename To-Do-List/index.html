@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do-List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container" id="app">
+    <h2>Task Manager</h2>
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+    </select>
+    <input type="date" id="date">
+    <button onclick="addTask()">Add Task</button>
+    <input type="text" id="search" placeholder="Search..." onkeyup="renderTasks()">
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <h4 id="count"></h4>
+
+    <div id="taskList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
