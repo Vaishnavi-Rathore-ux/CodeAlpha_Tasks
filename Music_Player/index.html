@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">
+        <div class="logo">🎵</div>
+        <div class="title-wrap">
+          <h1>Smart Music Player</h1>
+          <p> Responsive Music Player with playlist, Search & Playback Controls</p>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <button class="btn" id="themeBtn">🌙 Dark / Light</button>
+        <button class="btn" id="shuffleBtn">🔀 Shuffle</button>
+        <button class="btn" id="repeatBtn">🔁 Repeat: Off</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card player">
+        <div class="cover">
+          <img id="coverImg" src="images/cover1.jpg" alt="Cover" />
+          <div class="badge" id="genreBadge">Pop</div>
+        </div>
+
+        <div class="song-meta">
+          <div>
+            <h2 id="songTitle">Sunrise Vibes</h2>
+            <p id="songArtist">Artist: Nova Beats</p>
+          </div>
+          <div class="heart" id="favBtn" title="Add to Favorites">♡</div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="time" id="currentTime">0:00</div>
+          <input type="range" id="progress" value="0" min="0" max="100" />
+          <div class="time" id="duration">0:00</div>
+        </div>
+
+        <div class="controls">
+          <button class="circle" id="prevBtn" title="Previous">⏮</button>
+          <button class="circle play-main" id="playBtn" title="Play / Pause">▶</button>
+          <button class="circle" id="nextBtn" title="Next">⏭</button>
+        </div>
+
+        <div class="bottom-tools">
+          <div class="tool-box">
+            <div class="tool-head">
+              <span>🔊 Volume</span>
+              <span class="small" id="volumeText">70%</span>
+            </div>
+            <div class="tool-row">
+              <span>🔈</span>
+              <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7" />
+              <span>🔊</span>
+            </div>
+          </div>
+
+          <div class="tool-box">
+            <div class="tool-head">
+              <span>🎚 Modes</span>
+              <span class="small">Quick Controls</span>
+            </div>
+            <div class="status">
+              <div class="pill" id="allSongsPill">All Songs</div>
+              <div class="pill" id="favoritesPill">Favorites</div>
+              <div class="pill" id="recentPill">Recently Played</div>
+            </div>
+          </div>
+        </div>
+        
+        <audio id="audio"></audio>
+      </div>
+
+      <div class="card sidebar">
+        <div class="search">
+          <span>🔎</span>
+          <input type="text" id="searchInput" placeholder="Search by song, artist, or genre..." />
+        </div>
+
+        <div class="section-title">
+          <h3>Your Playlist</h3>
+          <span class="small" id="songCount">6 Tracks</span>
+        </div>
+
+        <div class="playlist" id="playlist"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
